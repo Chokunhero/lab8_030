@@ -30,13 +30,13 @@ class _HomeState extends State<Home> {
 
                 (value) {
                   print(value);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Profilepage(),
+                      ));
                 },
               );
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Profilepage(),
-                  ));
             },
           ),
         ),
