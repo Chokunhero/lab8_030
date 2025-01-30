@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:auth_buttons/auth_buttons.dart';
+import 'package:lab8_030/pages/profilepage.dart';
+
 import 'package:lab8_030/services/auth_service.dart';
 
 class Home extends StatefulWidget {
@@ -25,10 +27,16 @@ class _HomeState extends State<Home> {
             onPressed: () {
               authService.signInWithGoogle().then(
                 //ctrl+space for value {}
+
                 (value) {
                   print(value);
                 },
               );
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Profilepage(),
+                  ));
             },
           ),
         ),
